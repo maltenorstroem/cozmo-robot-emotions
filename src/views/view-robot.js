@@ -85,15 +85,18 @@ class ViewRobot extends FBP(LitElement) {
 
         .btn{
           border: 2px solid #444;
+          border-radius: 4px;
           background: white;
-          font-family: sans-serif;
-          font-size: 12px;
+          font-family: var(--fonts-sans);
+          font-weight: 600;
+          font-size: 1rem;
           text-transform: uppercase;
           cursor: pointer;
           height: 40px;
           min-width: 100px;
           vertical-align: middle;
           margin-top: 8px;
+          padding: 0.375em 0.5em 0.1875em;
         }
 
         .btn:hover {
