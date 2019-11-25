@@ -170,6 +170,9 @@ class RobotEmotions extends FBP(LitElement) {
         rlwEyelid.style= "height: 10px; border-top-left-radius: 100%; border-top-right-radius: 100%;";
     }
 
+    /**
+     * doubting / dubiative
+     */
     dubiative() {
         let eyes = this.shadowRoot.querySelector('.eyes');
         eyes.classList.remove('topdown');
@@ -198,6 +201,9 @@ class RobotEmotions extends FBP(LitElement) {
         rlwEyelid.style= "";
     }
 
+    /**
+     * sad
+     */
     sad() {
         let eyes = this.shadowRoot.querySelector('.eyes');
         eyes.classList.remove('topdown');
@@ -226,6 +232,9 @@ class RobotEmotions extends FBP(LitElement) {
         rlwEyelid.style= "";
     }
 
+    /**
+     * really sad
+     */
     reallySad() {
         let eyes = this.shadowRoot.querySelector('.eyes');
         eyes.classList.remove('topdown');
@@ -254,6 +263,9 @@ class RobotEmotions extends FBP(LitElement) {
         rlwEyelid.style= "";
     }
 
+    /**
+     * bored
+     */
     bored() {
         let eyes = this.shadowRoot.querySelector('.eyes');
         eyes.classList.remove('topdown');
@@ -282,17 +294,76 @@ class RobotEmotions extends FBP(LitElement) {
         rlwEyelid.style= "";
     }
 
+    /**
+     * chocked
+     */
     chock() {
-    }
+        let eyes = this.shadowRoot.querySelector('.eyes');
+        eyes.classList.remove('topdown');
+        let lefteye = this.shadowRoot.querySelector('div.left');
+        let lEyelid = lefteye.querySelector('.eyelid');
+        let llwEyelid = lefteye.querySelector('.lowereyelid');
+        let lefthr = lefteye.querySelectorAll('hr');
+        lefthr.forEach((item)=>{
+            item.style.borderTop = '';
+            item.style.borderBottom = '';
+        });
+        lefteye.style = "transform: matrix(1, 0, 0, 1, 0, 0);";
+        lEyelid.style = "";
+        llwEyelid.style = "";
 
-    suspicious() {
-    }
-
-    satisfied() {
+        let righteye = this.shadowRoot.querySelector('div.right');
+        let rEyelid = righteye.querySelector('.eyelid');
+        let rlwEyelid = righteye.querySelector('.lowereyelid');
+        let righthr = righteye.querySelectorAll('hr');
+        righthr.forEach((item)=>{
+            item.style.borderTop = '';
+            item.style.borderBottom = '';
+        });
+        righteye.style = "transform: matrix(1, 0, 0, 1, 0, 0);";
+        rEyelid.style = "";
+        rlwEyelid.style= "";
     }
 
     /**
-     *
+     * suspicious
+     */
+    suspicious() {
+    }
+
+    /**
+     * satisfied
+     */
+    satisfied() {
+        let eyes = this.shadowRoot.querySelector('.eyes');
+        eyes.classList.remove('topdown');
+        let lefteye = this.shadowRoot.querySelector('div.left');
+        let lEyelid = lefteye.querySelector('.eyelid');
+        let llwEyelid = lefteye.querySelector('.lowereyelid');
+        let lefthr = lefteye.querySelectorAll('hr');
+        lefthr.forEach((item)=>{
+            item.style.borderTop = '';
+            item.style.borderBottom = '';
+        });
+        lefteye.style = "border-top-left-radius: 30px; border-top-right-radius: 30px; height: 20px; top: -20px;";
+        lEyelid.style = "height: 10px; border-top-left-radius: 100%; border-top-right-radius: 100%; bottom: -3px; transform: matrix(0.99756, 0.06976, -0.06976, 0.99756, 0, 0);";
+        llwEyelid.style = "";
+
+        let righteye = this.shadowRoot.querySelector('div.right');
+        let rEyelid = righteye.querySelector('.eyelid');
+        let rlwEyelid = righteye.querySelector('.lowereyelid');
+        let righthr = righteye.querySelectorAll('hr');
+        righthr.forEach((item)=>{
+            item.style.borderTop = '1px solid rgb(74, 74, 74)';
+            item.style.borderBottom = '1px solid rgb(255, 64, 64);';
+        });
+        righteye.style = "border-top-left-radius: 30px; border-top-right-radius: 30px; height: 20px; top: -20px;";
+        rEyelid.style = "";
+        rlwEyelid.style= "";
+    }
+
+    /**
+     * kill mode
      */
     killAllTheHumans() {
         let eyes = this.shadowRoot.querySelector('.eyes');

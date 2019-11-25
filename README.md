@@ -17,3 +17,8 @@ inspired by ANKI cozmo
 ## How to use
 just call the desired function on the robot-emotions component.
 e.g. in dev console $0.smile();
+
+## Install dependencies
+> npm install
+## Run the sample
+> npm run start
